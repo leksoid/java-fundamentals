@@ -2,6 +2,7 @@ package com.epam.cdp.java_testng.aliaksei_taran;
 
 import com.epam.cdp.java_testng.aliaksei_taran.task1.RandomArrayClient;
 import com.epam.cdp.java_testng.aliaksei_taran.task2.StringProcessor;
+import com.epam.cdp.java_testng.aliaksei_taran.task3.Calculator;
 
 import java.util.Scanner;
 
@@ -29,5 +30,11 @@ public class Runner {
         System.out.println(firstString+" : "+secondString);
         sp.printLongestString(firstString,secondString);
         sp.printShortestString(firstString,secondString);
+
+        Calculator calc = new Calculator();
+        calc.initScanner();
+        calc.getInputFromUser();
+        calc.performCommand();
+
     }
 }
