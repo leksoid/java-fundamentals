@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 /*
+ * Task #1
  * Created by
  * USER: Aliaksei_Taran
  * DATE: 11/15/2018
@@ -26,7 +27,9 @@ public class RandomArrayClient {
     }
 
     public void replaceOdds(int toInt){
+        // loop through the existing array
         for(int a=0;a<array.length;a++){
+            // check that if the remainder of division by 2 is not 0 - the int is odd
             if(array[a]%2 != 0){
                 array[a]=toInt;
             }
