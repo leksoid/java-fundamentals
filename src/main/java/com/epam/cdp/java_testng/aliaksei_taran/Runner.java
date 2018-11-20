@@ -28,8 +28,7 @@ public class Runner {
         String firstString = sp.getStringFromUser();
         String secondString = sp.getStringFromUser();
         System.out.println(firstString+" : "+secondString);
-        sp.printLongestString(firstString,secondString);
-        sp.printShortestString(firstString,secondString);
+        sp.compareLengths(firstString,secondString);
 
         Calculator calc = new Calculator();
         calc.initScanner();

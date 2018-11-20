@@ -12,14 +12,7 @@ public class Calculator {
     private int x;
     private int y;
     private String command;
-
     private Scanner scanner;
-
-    /*
-            Implement a calculator. The program should take two integer numbers and operation
-        character (+, -, * or /) from the console and output the results back to the console.
-     */
-
 
     public Scanner initScanner() {
         return this.scanner = new Scanner(System.in);

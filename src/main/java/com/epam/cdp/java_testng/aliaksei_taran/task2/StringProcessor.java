@@ -22,19 +22,15 @@ public class StringProcessor {
         return this.scanner.nextLine();
     }
 
-    public void printLongestString(String initial, String compareTo){
+    public void compareLengths(String initial, String compareTo){
         if (initial.length()>compareTo.length()){
-            System.out.println(initial);
+            System.out.println("The longest string is " + initial);
+            System.out.println("The shortest string is " + compareTo);
+        } else if (initial.length() == compareTo.length()) {
+            System.out.println("String lengths equal");
         } else {
-            System.out.println(compareTo);
-        }
-    }
-
-    public void printShortestString(String initial, String compareTo){
-        if (initial.length()<compareTo.length()){
-            System.out.println(initial);
-        } else {
-            System.out.println(compareTo);
+            System.out.println("The longest string is " + compareTo);
+            System.out.println("The shortest string is " + initial);
         }
     }
 }
