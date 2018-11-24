@@ -25,15 +25,19 @@ public class Runner {
         ra.replaceOdds(0);
         ra.printOutArray();
 
+        Calculator calc = new Calculator();
+        calc.initScanner();
+        calc.getInputFromUser();
+        calc.performCommand();
+
         StringProcessor s = new StringProcessor();
         scanner = s.initScanner();
         List<String> l = s.getInputFromUser();
         System.out.println(l);
         s.compareStrings(l);
+        scanner.close();
 
-        Calculator calc = new Calculator();
-        calc.initScanner();
-        calc.getInputFromUser();
-        calc.performCommand();
+
+
     }
 }

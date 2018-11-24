@@ -1,5 +1,6 @@
 package com.epam.cdp.java_testng.aliaksei_taran.task3;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 /*
@@ -34,8 +35,12 @@ public class Calculator {
                 break;
             case "*":
                 System.out.println("The result of operation is: " + multiplication());
+                break;
             case "/":
-                System.out.println("The result of operation is: " + division());
+                System.out.println(this.y != 0 ? "The result of operation is: " + division() : "Error: Cannot divide by zero!");
+                break;
+            default:
+                System.out.println("No valid operation command provided");
         }
     }
 
@@ -53,10 +58,14 @@ public class Calculator {
 
     private double division(){
         double result = 0.0;
-        try {
-            result = ((double) this.x / this.y);
-        } catch (ArithmeticException e){
-            e.printStackTrace();
+        if (this.y !=0){
+            try {
+                result = ((double) this.x / this.y);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("Cannot divide by zero!");
         }
         return result;
     }

@@ -29,9 +29,13 @@ public class StringProcessor {
 
     public void compareStrings(List<String> l){
         Optional<String> shortest = l.stream().min(Comparator.comparingInt(String::length));
-        shortest.ifPresent(x -> System.out.println(String.format("The shortest string is %s", x)));
         Optional<String> longest = l.stream().max(Comparator.comparingInt(String::length));
-        longest.ifPresent(x -> System.out.println(String.format("The longest string is %s", x)));
+        if (!shortest.equals(longest)) {
+            shortest.ifPresent(x -> System.out.println(String.format("The shortest string is %s", x)));
+            longest.ifPresent(x -> System.out.println(String.format("The longest string is %s", x)));
+        } else {
+            System.out.println("Provided strings equal");
+        }
     }
 
     // from previous implementation, leaving there to compare
