@@ -4,6 +4,7 @@ import com.epam.cdp.java_testng.aliaksei_taran.task1.RandomArrayClient;
 import com.epam.cdp.java_testng.aliaksei_taran.task2.StringProcessor;
 import com.epam.cdp.java_testng.aliaksei_taran.task3.Calculator;
 
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -16,24 +17,23 @@ import java.util.Scanner;
 public class Runner {
     private static Scanner scanner;
 
-    public static void main (String args[]){
+    public static void main (String[] args){
+
         RandomArrayClient ra = new RandomArrayClient();
         ra.generateRandomArray(20);
         ra.printOutArray();
         ra.replaceOdds(0);
         ra.printOutArray();
 
-        StringProcessor sp = new StringProcessor();
-        scanner = sp.initScanner();
-        String firstString = sp.getStringFromUser();
-        String secondString = sp.getStringFromUser();
-        System.out.println(firstString+" : "+secondString);
-        sp.compareLengths(firstString,secondString);
+        StringProcessor s = new StringProcessor();
+        scanner = s.initScanner();
+        List<String> l = s.getInputFromUser();
+        System.out.println(l);
+        s.compareStrings(l);
 
         Calculator calc = new Calculator();
         calc.initScanner();
         calc.getInputFromUser();
         calc.performCommand();
-
     }
 }
