@@ -28,6 +28,7 @@ public class StringProcessor {
     }
 
     public void compareStrings(List<String> l){
+        // use for
         Optional<String> shortest = l.stream().min(Comparator.comparingInt(String::length));
         Optional<String> longest = l.stream().max(Comparator.comparingInt(String::length));
         if (!shortest.equals(longest)) {
